@@ -9,7 +9,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffffffef;
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(246, 246, 246, 0.8);
 }
@@ -44,13 +44,33 @@ form button:hover {
     background-color: #0056b3;
 }
 
+.ProdAdd {
+    display: none;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fffefbf4;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(246, 246, 246, 0.8);
+}
+
 ul {
     list-style: none;
     padding: 0;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
 ul li {
+    padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #f9f9f9; /* Cor da borda */
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
 }
 
 .delete-image {
@@ -69,4 +89,5 @@ ul li {
 .delete-image:active {
     transform: scale(0.9);
 }
+
 

@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
         productList.innerHTML = '';
         const products = JSON.parse(localStorage.getItem('products')) || [];
 
+        if (products.length >0){
+            document.querySelector('.ProdAdd').style.display = 'block'
+        } else {
+            document.querySelector('.ProdAdd').style.display = 'none'
+        }
+
         products.forEach((product, index) => {
             const li = document.createElement('li');
             li.textContent = `${product.name} - R$ ${product.price}   `;
@@ -28,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
     productForm.addEventListener('submit', event => {
         event.preventDefault();
 
