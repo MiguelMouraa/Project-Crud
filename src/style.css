@@ -81,7 +81,6 @@ ul li {
     background-color: transparent; 
 }
 
-
 .delete-image:hover {
     opacity: 0.7; 
 }
@@ -89,5 +88,3 @@ ul li {
 .delete-image:active {
     transform: scale(0.9);
 }
-
-
