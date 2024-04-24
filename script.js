@@ -2,28 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const productForm = document.getElementById('product-form');
 
+    
     function displayProducts() {
         productList.innerHTML = '';
         const products = JSON.parse(localStorage.getItem('products')) || [];
 
-        if (products.length > 0) {
-            document.querySelector('.ProdAdd').style.display = 'block';
+        if (products.length >0){
+            document.querySelector('.ProdAdd').style.display = 'block'
         } else {
-            document.querySelector('.ProdAdd').style.display = 'none';
+            document.querySelector('.ProdAdd').style.display = 'none'
         }
 
         products.forEach((product, index) => {
             const li = document.createElement('li');
             li.textContent = `${product.name} - R$ ${product.price}   `;
 
+            
             const deleteImage = document.createElement('img');
-            deleteImage.src = './assets/image/Lixeira.png';
+            deleteImage.src = './assets/image/Lixeira.png'; 
             deleteImage.alt = 'Excluir';
-            deleteImage.classList.add('delete-image');
+            deleteImage.classList.add('delete-image'); 
             deleteImage.addEventListener('click', () => {
+                
                 products.splice(index, 1);
                 localStorage.setItem('products', JSON.stringify(products));
-                displayProducts();
+                displayProducts(); 
             });
 
             li.appendChild(deleteImage);
@@ -51,5 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayProducts();
     });
 
+    
     displayProducts();
 });
